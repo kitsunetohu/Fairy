@@ -17,7 +17,10 @@ public class Item : MonoBehaviour, Interactable
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButton(0))
+        {
+            InteractWithUser();
+        }
     }
     public void InteractWithUser(){
         EventClasses.Instance.suprise.Invoke();

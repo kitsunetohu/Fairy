@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 1185263369}
   m_Layer: 0
   m_Name: Yuko_win_humanoid
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8881902c7984c444b29ab08e2032440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  FinishPoint: {fileID: 0}
 --- !u!195 &1185263369
 NavMeshAgent:
   m_ObjectHideFlags: 0
