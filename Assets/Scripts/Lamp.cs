@@ -21,6 +21,6 @@ public class Lamp : MonoBehaviour,Interactable
     }
 
     public void InteractWithUser(){
-
+        EventClasses.Instance.suprise.Invoke();
     }
 }
