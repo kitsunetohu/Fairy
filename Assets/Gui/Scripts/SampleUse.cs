@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class SampleUse : MonoBehaviour
 {
     GameObject gui; //guiのオブジェクト
     GuiTextMessage script; //GuiTextMessageスクリプトが入る変数
