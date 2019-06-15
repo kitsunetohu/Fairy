@@ -8,6 +8,10 @@ public class ControllerRay : MonoBehaviour
     [SerializeField] private GameObject camera;
 
     private Collider preCollider;
+    private Collider preCollider2;
+
+
+    private bool emphasis = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +38,22 @@ public class ControllerRay : MonoBehaviour
             camera.transform.position = hit.point;
             preCollider.gameObject.SetActive(true);
             preCollider = hit.collider;
+        }
+        if (hit.collider.tag == "interact"){
+            if(!emphasis){
+                hit.collider.gameObject.GetComponent<Outline>().enabled = true;
+                preCollider2 = hit.collider;
+                emphasis = true;
+            }
+            if(OVRInput.GetDown(OVRInput.Button.Two)){
+                
+                hit.collider.gameObject.GetComponent<Interactable>().InteractWithUser();
+                
+            }
+        }else if(emphasis){
+            pointer.SetActive(false);
+            emphasis = false;
+            preCollider2.gameObject.GetComponent<Outline>().enabled = false;
         }
     }
 }
